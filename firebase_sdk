@@ -1,0 +1,23 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyALPcrEqJ0S3Jdcsw1xbNFbZ8Ap7HMfFCg",
+    authDomain: "deutsch-lernen-f1e9c.firebaseapp.com",
+    databaseURL: "https://deutsch-lernen-f1e9c.firebaseio.com",
+    projectId: "deutsch-lernen-f1e9c",
+    storageBucket: "deutsch-lernen-f1e9c.appspot.com",
+    messagingSenderId: "275939622483",
+    appId: "1:275939622483:web:fb48460f501e608e84d0a6",
+    measurementId: "G-CRHR7EVDMS"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
