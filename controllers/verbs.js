@@ -7,7 +7,7 @@ const utils = require('../config/utils');
 module.exports.readVerbs = async (res) => {
     try {
         const response = await read.readColl('verbs');
-        utils.buildResponse(res, 200, response, "This is the information");
+        utils.buildResponse(res, 200, response, "This is the information from other pc");
     } catch (error) {
         console.log(error);
         utils.buildResponse(res, error.status, error.message)

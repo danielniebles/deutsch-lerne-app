@@ -45,3 +45,5 @@ Thumbs.db
 #
 .eslintrc.json
 .env
+
+serviceAccountKey.json
