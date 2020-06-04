@@ -23,7 +23,7 @@ module.exports.createExample = async (req, res) => {
     }
 };
 
-module.exports.updateExample = async (req, res) => {
+module.exports.updateExampleById = async (req, res) => {
     try {
         const response = await update.updateDoc('examples', req); 
         utils.buildResponse(res, 200, response, "Document updated");

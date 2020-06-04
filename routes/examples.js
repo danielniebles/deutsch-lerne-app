@@ -11,8 +11,8 @@ router.post('/write', (req, res) => {
     nouns.createExample(req.body, res)
 });
 
-router.post('/update', (req, res) => {
-    nouns.updateExample(req.body, res)
+router.post('/update/:id', (req, res) => {
+    nouns.updateExampleById(req, res)
 })
 
 module.exports = router;

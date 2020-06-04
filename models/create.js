@@ -1,5 +1,5 @@
 const db = require('./config');
-const MyError = require('../config/utils');
+const {MyError} = require('../config/utils');
 
 const writeDoc = (collection, data) => {
     return new Promise((resolve, reject) => {

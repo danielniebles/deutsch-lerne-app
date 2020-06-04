@@ -23,7 +23,7 @@ module.exports.createAdj = async (req, res) => {
     }
 };
 
-module.exports.updateAdj = async (req, res) => {
+module.exports.updateAdjById = async (req, res) => {
     try {
         const response = await update.updateDoc('adjectives', req); 
         utils.buildResponse(res, 200, response, "Document updated");

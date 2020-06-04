@@ -11,8 +11,8 @@ router.post('/write', (req, res) => {
     nouns.createAdj(req.body, res)
 });
 
-router.post('/update', (req, res) => {
-    nouns.updateAdj(req.body, res)
+router.post('/update/:id', (req, res) => {
+    nouns.updateAdjById(req, res)
 })
 
 module.exports = router;

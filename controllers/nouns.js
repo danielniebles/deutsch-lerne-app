@@ -23,7 +23,7 @@ module.exports.createNoun = async (req, res) => {
     }
 };
 
-module.exports.updateNoun = async (req, res) => {
+module.exports.updateNounById = async (req, res) => {
     try {
         const response = await update.updateDoc('nouns', req); 
         utils.buildResponse(res, 200, response, "Document updated");
