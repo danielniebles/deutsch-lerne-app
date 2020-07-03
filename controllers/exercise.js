@@ -15,17 +15,22 @@ module.exports.generateExercise =  async (res) => {
         
         //Adjectives
         const responseAdjs = await read.readColl('adjectives');
-        const randomAdjs = utils.getRandom(responseAdjs, 2);
+        const randomAdjs = utils.getRandom(responseAdjs, 5);
         const randomAdjswId = utils.mergeRandomPropFromArray(exerciseIdV2, randomAdjs)
-        //console.log(randomAdjswId)
 
         //Nouns
         const responseNouns = await read.readColl('nouns');
-        const randomNouns = utils.getRandom(responseNouns, 2);
+        const randomNouns = utils.getRandom(responseNouns, 5);
         const randomNounswId = utils.mergeRandomPropFromArray(exerciseIdV1, randomNouns)
-        //console.log(randomNounswId)
 
-        const finalExercise = utils.shuffle(randomVerbswId.concat(randomAdjswId).concat(randomNounswId))
+        
+        const temp = utils.shuffle(randomVerbswId.concat(randomAdjswId).concat(randomNounswId))
+
+        const finalExercise =[]        
+        temp.forEach((elm, index) => {
+            const dummyVar = Object.assign(elm, {exerciseid: index})
+            finalExercise.push(dummyVar)
+        })
         
         utils.buildResponse(res, 200, finalExercise, "This is the exercise");
 

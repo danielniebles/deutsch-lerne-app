@@ -20,11 +20,11 @@ const getRandom = (arr, n) => {
     return result;
 }
 
-const mergeRandomPropFromArray = (arrprop, arr ) => {
+const mergeRandomPropFromArray = (arrprop, arr) => {
     const result = []
-    arr.forEach((elm) => {
+    arr.forEach((elm, index) => {
         const prop = arrprop [Math.floor(Math.random() * arrprop.length)];
-        const dummyVar = Object.assign(elm, {id:prop})
+        const dummyVar = Object.assign(elm, {id:prop, answered:false, correct:false})
         result.push(dummyVar)
     })
     return result

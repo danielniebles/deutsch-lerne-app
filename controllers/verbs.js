@@ -4,7 +4,7 @@ const create = require('../models/create');
 const update = require('../models/update');
 const utils = require('../config/utils');
 
-const readVerbs = async (res) => {
+module.exports.readVerbs = async (res) => {
     try {
         const response = await read.readColl('verbs');
         utils.buildResponse(res, 200, response, "This is the information from other pc");
@@ -45,7 +45,3 @@ module.exports.updateVerbById = async (req, res) => {
         utils.buildResponse(res, error.status, error.message)
     }
 };
-
-module.exports = {
-    readVerbs
-}
